@@ -30,6 +30,41 @@ class UI {
         //Nota: HTML5 te permite tener atributos custom poniendo data-(lo que sea) en nuestro caso es el de data-id
         this.post.innerHTML = output;
     }
+
+    showAlert(message, className) {
+        this. clearAlert();
+
+        //Create div
+        const div = document.createElement('div');
+        //Add classes
+        div.className = className;
+        //Add text
+        div.appendChild(document.createTextNode(message));
+        //Get parent
+        const container = document.querySelector('.postsContainer'); //Elemento donde meteremos el div de la alerta
+        //Get posts
+        const posts = document.querySelector('#posts'); //El contenedor de los posts que se toma como referencia para insertar el mensaje de alerta justo antes de él
+        //Insert alert div before posts container
+        container.insertBefore(div, posts);
+
+        //Timeout
+        setTimeout(() => {
+            this.clearAlert();
+        }, 3000);
+    }
+
+    clearAlert() {
+        const currentAlert = document.querySelector('.alert');
+
+        if (currentAlert) {
+            currentAlert.remove();
+        }
+    }
+
+    clearFields() {
+        this.titleInput.value='';
+        this.bodyInput.value='';
+    }
 }
 
 //Exportamos una variable que tendra todo el contenido de la clase UI
