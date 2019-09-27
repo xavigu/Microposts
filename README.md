@@ -17,10 +17,14 @@ $ npm install
 
 ### Serve
 To serve in the browser  - Runs webpack-dev-server
-To run the server side:
-$ npm run json:server
+
 ```sh
 $ npm start
+```
+
+To run the server side:
+```sh
+$ npm run json:server
 ```
 
 ### Build
