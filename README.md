@@ -36,6 +36,10 @@ $ npm run build
 
 ## More Info
 
+In this case, we have backend that are dealing with an API (db.json) which usually would be something built with noJS, Python, Ruby...
+But in this project, we are using JSON Server which mimics a real Rest API.
+In a real project, that would have to be on a server, usually a cloud server or VPS(something like Digital Ocean or Heroku where you have your backend API on)
+
 ### License
 
 This project is licensed under the MIT License
