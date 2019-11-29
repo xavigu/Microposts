@@ -65,7 +65,8 @@ function submitPost(){
 //Delete Post
 function deletePost(e) {
   e.preventDefault();
-  if (e.target.parentElement.classList.contains('delete')) { //Si el elemento que clickeas tiene la clase delete
+  console.log(e.target);
+  if (e.target.parentElement.classList.contains('delete')) { //Si el elemento que clickeas tiene la clase delete (que seria el padre(el anchor) del elemento X)
       const id = e.target.parentElement.dataset.id; //obtienes el atributo data-id de ese elemento
       if (confirm('Are you sure?')) {
         //Delete Post
